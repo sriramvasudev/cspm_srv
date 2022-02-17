@@ -1,6 +1,12 @@
 #!/bin/bash
 
 echo "Starting ScoutSuite installation..."
+
+#installing git if it is not available in the test machine
+
+sudo apt install git
+sudo apt-get install --reinstall ca-certificates
+
 git clone https://github.com/nccgroup/ScoutSuite
 
 echo "Clone Scoutsuit"
@@ -22,7 +28,7 @@ echo "ScoutSuite is completed the scan"
 
 echo "creation of directory"
 
-mkdir -p /home/manikandan/Desktop/ScoutSuite/reports
+mkdir -p /home/admin1/Desktop/ScoutSuite/reports
 
 #cd /home/manikandan/Desktop/ScoutSuite/scoutsuite-report/scoutsuite-results/
 sudo cp -r ~/Desktop/ScoutSuite/scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js ~/Desktop/ScoutSuite/reports/
